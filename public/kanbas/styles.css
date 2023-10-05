@@ -1,0 +1,18 @@
+.navbarinner a {
+    padding-top: 10px;
+    text-decoration: none;
+    padding-left: 5px;
+    border-left: 3px solid white;
+}
+
+.navbarouter a {
+    text-decoration: none;
+}
+
+.greenpadding li {
+    border-left: 3px solid green;
+}
+
+.greenpadding a {
+    text-decoration: none;
+}

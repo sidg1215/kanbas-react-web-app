@@ -1,50 +1,70 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
 </head>
 <div class="row">
-    <div class="col-1 bg-dark text-light" style="padding-right: 0px;">
+    <div class="d-flex flex-column bg-dark text-light d-none d-lg-block navbarouter"
+        style="padding-right: 0px; width: 85px; font-size: small;">
         <div class="list-group list-group-flush">
-            <a class="text-light" href="./profile/index.html">
-                <i class="fa-regular fa-user"></i>
-                Account
+            <a class="text-light" href="./profile/index.html" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-regular fa-user" style="padding-bottom: 5px;"></i>
+                    <p>Account</p>
+                </div>
             </a>
-            <a class="text-danger" href="./dashboard/dashboard.html">
-                <i class="fa-solid fa-table-columns"></i>>
-                Dashboard
+            <a class="text-light" href="../dashboard/dashboard.html" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-table-columns text-danger" style="padding-bottom: 5px; padding-top: 5px;"></i>
+                    <p>Dashboard</p>
+                </div>
             </a>
-            <a class="text-light" href="./assignments/index.html">
-                <i class="fa-brands fa-discourse"></i>
-                Courses
+            <a class="bg-light text-danger" href="./assignments/index.html" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-brands fa-discourse text-danger" style="padding-bottom: 5px;"></i>
+                    <p>Courses</p>
+                </div>
             </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-calendar"></i>
-                Calendar
+            <a class="text-light" href="#" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-calendar text-danger" style="padding-bottom: 5px;"></i>
+                    <p>Calendar</p>
+                </div>
             </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-inbox"></i>
-                Inbox
+            <a class="text-light" href="#" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-inbox text-danger" style="padding-bottom: 5px;"></i>
+                    <p>Inbox</p>
+                </div>
             </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                History
+            <a class="text-light" href="#" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-clock-rotate-left text-danger" style="padding-bottom: 5px;"></i>
+                    <p>History</p>
+                </div>
             </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-microphone-lines"></i>
-                Studio
+            <a class="text-light" href="#" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-microphone-lines text-danger" style="padding-bottom: 5px;"></i>
+                    <p>Studio</p>
+                </div>
             </a>
-            <a class="text-light" href="#">
-                <i class="fa-brands fa-creative-commons"></i>
-                Commons
+            <a class="text-light" href="#" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-brands fa-creative-commons text-danger" style="padding-bottom: 5px;"></i>
+                    <p>Commons</p>
+                </div>
             </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-circle-info"></i>
-                Help
+            <a class="text-light" href="#" style="padding-bottom: 5px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-circle-info text-danger" style="padding-bottom: 5px;"></i>
+                    <p>Help</p>
+                </div>
             </a>
         </div>
     </div>
     <div class="col">
-        <div class="row">
+        <div class="row d-none d-lg-block">
             <!-- <i class="fa-solid fa-bars"></i> -->
             <div class="col">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -56,16 +76,29 @@
             </div>
             <hr />
         </div>
+        <div class="d-flex flex-row bg-dark text-light d-lg-none justify-content-between" style="height: 70px;">
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <div>
+                Button
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <p>CS4550 12631 Web Development Fall 2023</p>
+                <p>Assignments</p>
+            </div>
+            <div>
+                Button
+            </div>
+        </div>
         <div class="row">
-            <div class="col-1 bg-light text-dark">
-                <div class="list-group list-group-flush">
-                    <a href="home.html" class="text-danger">Home</a>
-                    <a href="#" class="text-danger">Modules</a>
+            <div class="col-1" style="width: 250px;">
+                <div class="list-group list-group-flush navbarinner">
+                    <a href="#" class="text-danger">Home</a>
+                    <a href="../assignments/home.html" class="text-danger">Modules</a>
                     <a href="#" class="text-danger">Piazza</a>
                     <a href="#" class="text-danger">Zoom Meetings</a>
-                    <a href="assignments/index.html" class="text-danger">Assignments</a>
+                    <a href="#" class="text-dark" style="border-left: 3px solid black; ">Assignment</a>
                     <a href="#" class="text-danger">Quizzes</a>
-                    <a href="grades.html" class="text-danger">Grades</a>
+                    <a href="#" class="text-danger">Grades</a>
                     <a href="#" class="text-danger">People</a>
                     <a href="#" class="text-danger">Panopto Video</a>
                     <a href="#" class="text-danger">Discussions</a>
@@ -76,344 +109,152 @@
                     <a href="#" class="text-danger">Outcomes</a>
                     <a href="#" class="text-danger">Collaborations</a>
                     <a href="#" class="text-danger">Syllabus</a>
-                    <a href="#" class="text-danger">Settings</a>
                 </div>
             </div>
             <div class="col">
                 <div class="row">
                     <div class="col">
-                        <div class="d-flex flex-row">
-                            <input placeholder="Search for Assignment" class="float-end" />
-                        </div>
+                        <input placeholder="Search for assignment" class="form-control"/>
                     </div>
                     <div class="col">
                         <div class="d-flex flex-row-reverse">
                             <button class="btn btn-secondary"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                            <button class="btn btn-danger me-1" type="button">Assignment</button>
-                            <button class="btn btn-secondary dropdown-toggle me-1" type="button">Group</button>
+                        <button class="btn btn-danger me-1" type="button">Assignment</button>
+                        <button class="btn btn-secondary dropdown-toggle me-1" type="button">Group</button>
                         </div>
                     </div>
                 </div>
                 <hr />
-                <ul class="list-group">
+                <ul class="list-group greenpadding">
                     <div class="list-group-item list-group-item-secondary">
                         Assignments
                         <div class="float-end">
                             <div class="d-flex flex-row justify-content-evenly">
-                                40% of Total
-                                <i class="fa-solid fa-plus" style="padding-right: 5px; padding-left: 5px;"></i>
+
+                                <p>40% of total</p>
+                                <i class="fa-solid fa-plus" style="padding-right: 5px;"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="list-group-item">
-                        <div class="float-start me-2">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        A1 SETUP
-                        <div class="float-end">
-                            <div class="d-flex flex-row justify-content-evenly">
-                                <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <li class="list-group-item ps-5 text-dark">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <a class="text-dark" href="./edit/edit1.html">
+                                <b>A1</b>
+                                <p>
+                                    Week 0
+                                </p>
+                                <p>
+                                    Due Sep 18
+                                </p>
+                            </a>
+                            <div class="float-end">
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="float-start me-2">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        A2 HTML
-                        <div class="float-end">
-                            <div class="d-flex flex-row justify-content-evenly">
-                                <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                    <li class="list-group-item ps-5">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <a class="text-dark" href="./edit/edit1.html">
+                                <b>A1</b>
+                                <p>
+                                    Week 0
+                                </p>
+                                <p>
+                                    Due Sep 18
+                                </p>
+                            </a>
+                            <div class="float-end">
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="float-start me-2">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        A3 CSS
-                        <div class="float-end">
-                            <div class="d-flex flex-row justify-content-evenly">
-                                <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                    <li class="list-group-item ps-5">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <a class="text-dark" href="./edit/edit1.html">
+                                <b>A1</b>
+                                <p>
+                                    Week 0
+                                </p>
+                                <p>
+                                    Due Sep 18
+                                </p>
+                            </a>
+                            <div class="float-end">
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="float-start me-2">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        A4 BOOTSTRAP
-                        <div class="float-end">
-                            <div class="d-flex flex-row justify-content-evenly">
-                                <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                    <li class="list-group-item ps-5">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <a class="text-dark" href="./edit/edit1.html">
+                                <b>A1</b>
+                                <p>
+                                    Week 0
+                                </p>
+                                <p>
+                                    Due Sep 18
+                                </p>
+                            </a>
+                            <div class="float-end">
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="float-start me-2">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        A5 JAVASCRIPT
-                        <div class="float-end">
-                            <div class="d-flex flex-row justify-content-evenly">
-                                <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                    <li class="list-group-item ps-5">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <a class="text-dark" href="./edit/edit1.html">
+                                <b>A1</b>
+                                <p>
+                                    Week 0
+                                </p>
+                                <p>
+                                    Due Sep 18
+                                </p>
+                            </a>
+                            <div class="float-end">
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="float-start me-2">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        A6 REACT
-                        <div class="float-end">
-                            <div class="d-flex flex-row justify-content-evenly">
-                                <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                    <li class="list-group-item ps-5">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <a class="text-dark" href="./edit/edit1.html">
+                                <b>A1</b>
+                                <p>
+                                    Week 0
+                                </p>
+                                <p>
+                                    Due Sep 18
+                                </p>
+                            </a>
+                            <div class="float-end">
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <i class="fa-solid fa-circle-check" style="color: green; padding-right: 5px;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
                 </ul>
             </div>
+            <div class="col-2">
+            </div>
         </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-1 bg-dark text-light" style="padding-right: 0px;">
-        <div class="list-group list-group-flush">
-            <a class="text-light" href="./profile/index.html">
-                <i class="fa-regular fa-user"></i>
-                Account
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-table-columns"></i>
-                Dashboard
-            </a>
-            <a class="text-light" href="./assignments/index.html">
-                <i class="fa-brands fa-discourse"></i>
-                Courses
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-calendar"></i>
-                Calendar
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-inbox"></i>
-                Inbox
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                History
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-microphone-lines"></i>
-                Studio
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-brands fa-creative-commons"></i>
-                Commons
-            </a>
-            <a class="text-light" href="#">
-                <i class="fa-solid fa-circle-info"></i>
-                Help
-            </a>
-        </div>
-    </div>
-    <div class="col-1 bg-light text-dark">
-        <div class="list-group list-group-flush">
-            <a href="../home.html" class="text-danger">Home</a>
-            <a href="#" class="text-danger">Modules</a>
-            <a href="#" class="text-danger">Piazza</a>
-            <a href="#" class="text-danger">Zoom Meetings</a>
-            <a href="assignments/index.html" class="text-danger">Assignments</a>
-            <a href="#" class="text-danger">Quizzes</a>
-            <a href="grades.html" class="text-danger">Grades</a>
-            <a href="#" class="text-danger">People</a>
-            <a href="#" class="text-danger">Panopto Video</a>
-            <a href="#" class="text-danger">Discussions</a>
-            <a href="#" class="text-danger">Announcements</a>
-            <a href="#" class="text-danger">Pages</a>
-            <a href="#" class="text-danger">Files</a>
-            <a href="#" class="text-danger">Rubrics</a>
-            <a href="#" class="text-danger">Outcomes</a>
-            <a href="#" class="text-danger">Collaborations</a>
-            <a href="#" class="text-danger">Syllabus</a>
-            <a href="#" class="text-danger">Settings</a>
-        </div>
-    </div>
-    <div class="col">
-        <input placeholder="Search for Assignments">
-        <button>Group</button>
-        <button>Assignment</button>
-        <select>
-            <option>Edit Assignment Dates</option>
-        </select>
-        <table valign="top">
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>ASSIGNMENTS 40% of Total</h3>
-                    </td>
-                    <td>
-                        <select id="select-assignment-options">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li>
-                <a href="./edit/edit1.html">A1 - ENV + HTML</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit2.html">A2 - CSS + BOOTSTRAP</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit3.html">A3 - JS + REACT</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit4.html">A4 - STATE + REDUX</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit5.html">A5 - NODE + SESSION</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit6.html">A6 - MONGO + MONGOOSE</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-        </ul>
-        <table valign="top">
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>QUIZZES 10% of Total</h3>
-                    </td>
-                    <td>
-                        <select id="select-assignment-options">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li>
-                <a href="./edit/edit1.html">Q1 - HTML</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit1.html">Q1 - CSS</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit1.html">Q3 - JS, ES6</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit1.html">Q4 - NODE</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit1.html">Q5 - MONGO</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-        </ul>
-        <table valign="top">
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>EXAMS 20% of Total</h3>
-                    </td>
-                    <td>
-                        <select id="select-assignment-options">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li>
-                <a href="./edit/edit1.html">Midterm</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-            <li>
-                <a href="./edit/edit1.html">Final</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-        </ul>
-        <table valign="top">
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>PROJECT 30% of Total</h3>
-                    </td>
-                    <td>
-                        <select id="select-assignment-options">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <ul>
-            <li>
-                <a href="./edit/edit1.html">Project</a>
-                <br>
-                <a href="#">Multiple Modules</a> | Not avaliable yet
-            </li>
-        </ul>
     </div>
 </div>
