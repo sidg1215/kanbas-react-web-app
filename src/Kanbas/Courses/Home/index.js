@@ -27,8 +27,8 @@ function Home() {
                 <h2>Status</h2>
                 <div className="d-none d-xl-block col">
                     <h1>Course Status</h1>
-                    <button>Unpublish</button>
-                    <button>Published</button>
+                    <button className="btn btn-light">Unpublish</button>
+                    <button className="btn btn-light">Published</button>
                     <ul>
                         <li><a href="#">Import Existing Content</a></li>
                         <li><a href="#">Import From Commons</a></li>
