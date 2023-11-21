@@ -1,6 +1,5 @@
 import ModuleList from "../Modules/ModuleList";
 import { useParams } from "react-router";
-import db from "../../Database";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
