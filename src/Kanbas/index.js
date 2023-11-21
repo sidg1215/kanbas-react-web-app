@@ -28,15 +28,13 @@ function Kanbas() {
     };
 
     const deleteCourse = async (course) => {
-        console.log("---");
         console.log(course);
-        console.log("------");
         const response = await axios.delete(
             `${URL}/${course}`
         );
         console.log(response);
         const newCourses = courses.filter(
-            (c) => c !== course);
+            (c) => c._id !== course);
         setCourses(newCourses);
     };
     const updateCourse = async (course) => {

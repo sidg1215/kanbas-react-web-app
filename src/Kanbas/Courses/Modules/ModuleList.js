@@ -9,7 +9,10 @@ import {
     setModule,
     setModules
 } from "./modulesReducer";
-import { findModulesForCourse, createModule, updateModule as clientUpdateModule } from "./modules/client";
+import {
+    findModulesForCourse, createModule, updateModule as clientUpdateModule,
+    deleteModule as clientDeleteModule
+} from "./modules/client";
 
 
 function ModuleList() {
@@ -25,8 +28,15 @@ function ModuleList() {
         });
     };
     const handleUpdateModule = async () => {
+        console.log("M passed in");
+        console.log(module);
         const status = await clientUpdateModule(module);
         dispatch(updateModule(module));
+    };
+    const handleDeleteModule = async (moduleId) => {
+        await clientDeleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
     };
 
     useEffect(() => {
@@ -54,7 +64,7 @@ function ModuleList() {
                     </button>
                     <button
                         className="btn btn-primary"
-                        onClick={handleUpdateModule}> 
+                        onClick={handleUpdateModule}>
                         Update
                     </button>
                 </div>
@@ -72,7 +82,7 @@ function ModuleList() {
                             <div className="col">
                                 <button
                                     className="btn btn-danger me-2"
-                                    onClick={() => dispatch(deleteModule(module._id))}>
+                                    onClick={() => handleDeleteModule(module._id)}>
                                     Delete
                                 </button>
                                 <button
