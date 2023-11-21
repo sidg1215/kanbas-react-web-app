@@ -20,6 +20,7 @@ function Kanbas() {
 
     const addCourse = async () => {
         const response = await axios.post(URL, course);
+        console.log(response);
         setCourses([
             response.data,
             ...courses,

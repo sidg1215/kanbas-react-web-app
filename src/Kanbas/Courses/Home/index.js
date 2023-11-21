@@ -1,10 +1,31 @@
 import ModuleList from "../Modules/ModuleList";
 import { useParams } from "react-router";
 import db from "../../Database";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 
 function Home() {
     const { courseId } = useParams();
+    console.log(courseId);
+    const [course, setCourse] = useState("hi");
+    const findCourseById = async (courseId) => {
+        const URL = "http://localhost:4000/api/courses";
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
+    useEffect(() => {
+        console.log(course);
+        async function wrapper() {
+            await findCourseById(courseId);
+            console.log(course);
+        }
+        wrapper();
+        console.log(course);
+    }, []);
     return (
         <div className="row">
             <h2>Home</h2>
@@ -12,7 +33,7 @@ function Home() {
                 <div className="col">
                     <nav style={{ '--bs-breadcrumb-divider': '>' }} aria-label="breadcrumb">
                         <ol className="breadcrumb">
-                            <li className="breadcrumb-item text-danger">{db.courses.find(course => course._id === courseId).name}</li>
+                            <li className="breadcrumb-item text-danger">{course.name}</li>
                             <li>/</li>
                             <li className="breadcrumb-item" aria-current="page">Home</li>
                         </ol>
