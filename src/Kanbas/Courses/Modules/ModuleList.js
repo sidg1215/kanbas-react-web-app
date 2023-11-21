@@ -1,14 +1,15 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
 import {
     addModule,
     deleteModule,
     updateModule,
     setModule,
+    setModules
 } from "./modulesReducer";
+import { findModulesForCourse, createModule, updateModule as clientUpdateModule } from "./modules/client";
 
 
 function ModuleList() {
@@ -16,6 +17,25 @@ function ModuleList() {
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
+    const handleAddModule = () => {
+        console.log(module);
+        createModule(courseId, module).then((module) => {
+            console.log(module);
+            dispatch(addModule(module));
+        });
+    };
+    const handleUpdateModule = async () => {
+        const status = await clientUpdateModule(module);
+        dispatch(updateModule(module));
+    };
+
+    useEffect(() => {
+        findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
+
 
     return (
         <ul className="list-group">
@@ -29,12 +49,12 @@ function ModuleList() {
                 <div className="d-flex flex-row">
                     <button
                         className="btn btn-success me-2"
-                        onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                        onClick={handleAddModule}>
                         Add
                     </button>
                     <button
                         className="btn btn-primary"
-                        onClick={() => dispatch(updateModule(module))}>
+                        onClick={handleUpdateModule}> 
                         Update
                     </button>
                 </div>
