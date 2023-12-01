@@ -1,13 +1,39 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignments = db.assignments;
-    const courseAssignments = assignments.filter(
-        (assignment) => assignment.course === courseId);
+    const [course, setCourse] = useState({});
+    const [assignments, setAssignments] = useState([]);
+    const findCourseById = async (courseId) => {
+        const URL = "http://localhost:4000/api/courses";
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
+    const getAssignments = async (courseId) => {
+        const URL = "http://localhost:4000/api/courses";
+        const response = await axios.get(
+            `${URL}/${courseId}/assignments`
+        );
+        console.log(response);
+        setAssignments(response.data);
+    };
+
+    useEffect(() => {
+        async function wrapper() {
+            await findCourseById(courseId);
+            await getAssignments(courseId);
+        }
+        wrapper();
+    }, []);
+    
     return (
         <div>
             <h2>Assignments for course {courseId}</h2>
@@ -15,7 +41,7 @@ function Assignments() {
                 <div className="col">
                     <nav style={{ '--bs-breadcrumb-divider': '>' }} aria-label="breadcrumb">
                         <ol className="breadcrumb">
-                            <li className="breadcrumb-item text-danger">{db.courses.find(course => course._id === courseId).name}</li>
+                            <li className="breadcrumb-item text-danger">{course.name}</li>
                             <li>/</li>
                             <li className="breadcrumb-item" aria-current="page">Assignments</li>
                         </ol>
@@ -44,7 +70,7 @@ function Assignments() {
                         </div>
                     </div>
                 </div>
-                {courseAssignments.map((assignment) => (
+                {assignments.map((assignment) => (
                     <Link
                         key={assignment._id}
                         to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
