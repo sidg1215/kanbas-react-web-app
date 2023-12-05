@@ -38,38 +38,59 @@ function Account() {
             <h1>Account</h1>
             {account && (
                 <div className="col-3">
-                    <input value={account.password}
+                    <label form="password">
+                        Password:
+                    </label>
+                    <input name="password" value={account.password}
                         onChange={(e) => setAccount({
                             ...account,
                             password: e.target.value
                         })} />
-                    <input value={account.firstName}
+                    <label form="firstname">
+                        First name:
+                    </label>
+                    <input name="firstname" value={account.firstName}
                         onChange={(e) => setAccount({
                             ...account,
                             firstName: e.target.value
                         })} />
-                    <input value={account.lastName}
+                    <label form="lastname">
+                        Last name:
+                    </label>
+                    <input name="lastname" value={account.lastName}
                         onChange={(e) => setAccount({
                             ...account,
                             lastName: e.target.value
                         })} />
+                    <label form="dob">
+                        DOB:
+                    </label>
                     <input value={account.dob}
+                        name="dob"
                         type="date"
                         onChange={(e) => setAccount({
                             ...account,
                             dob: e.target.value
                         })} />
-                    <div>Dob: {account.dob}</div>
-                    <input value={account.email}
+                    <div>Dob selected: {account.dob}</div>
+                    <label form="email">
+                        Email:
+                    </label>
+                    <input name="email"
+                        value={account.email}
                         onChange={(e) => setAccount({
                             ...account,
                             email: e.target.value
                         })} />
+                    <label form="role">
+                        Role:
+                    </label>
                     <select onChange={(e) => setAccount({
                         ...account,
                         role: e.target.value
                     })}
-                    value={account.role}>
+                        name="role"
+                        value={account.role}>
                         <option value="USER">User</option>
                         <option value="ADMIN">Admin</option>
                         <option value="FACULTY">Faculty</option>
