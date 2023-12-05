@@ -17,22 +17,32 @@ function Signup() {
     };
     return (
         <div>
-            <h1>Signup</h1>
+            <h1>Sign Up</h1>
             {error && <div>{error}</div>}
+            <label>
+                Username:
+            </label>
+            <br></br>
             <input
                 value={credentials.username}
                 onChange={(e) => setCredentials({
                     ...credentials,
                     username: e.target.value
                 })} />
+            <br></br>
+            <label>
+                Password:
+            </label>
+            <br></br>
             <input
                 value={credentials.password}
                 onChange={(e) => setCredentials({
                     ...credentials,
                     password: e.target.value
                 })} />
-            <button onClick={signup}>
-                Signup
+            <br></br>
+            <button onClick={signup} className="btn btn-primary">
+                Sign Up
             </button>
         </div>
     );
