@@ -9,7 +9,7 @@ function Home() {
     console.log(courseId);
     const [course, setCourse] = useState("hi");
     const findCourseById = async (courseId) => {
-        const URL = "http://localhost:4000/api/courses";
+        const URL = `${process.env.REACT_APP_BASE_API}/api/courses`;
         const response = await axios.get(
             `${URL}/${courseId}`
         );
