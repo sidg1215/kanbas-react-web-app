@@ -10,7 +10,7 @@ function Assignments() {
     const [course, setCourse] = useState({});
     const [assignments, setAssignments] = useState([]);
     const findCourseById = async (courseId) => {
-        const URL = `${process.env.REACT_APP_BASE_API}/api/courses`;
+        const URL = `${process.env.REACT_APP_API_BASE}/api/courses`;
         const response = await axios.get(
             `${URL}/${courseId}`
         );
@@ -18,7 +18,7 @@ function Assignments() {
     };
 
     const getAssignments = async (courseId) => {
-        const URL = `${process.env.REACT_APP_BASE_API}/api/courses`;
+        const URL = `${process.env.REACT_APP_API_BASE}/api/courses`;
         const response = await axios.get(
             `${URL}/${courseId}/assignments`
         );

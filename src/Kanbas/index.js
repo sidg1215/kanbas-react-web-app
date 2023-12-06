@@ -56,7 +56,7 @@ function Kanbas() {
     };
 
 
-    const URL = `${process.env.REACT_APP_BASE_API}/api/courses";
+    const URL = `${process.env.REACT_APP_API_BASE}/api/courses`;
     const findAllCourses = async () => {
         const response = await axios.get(URL);
         setCourses(response.data);
